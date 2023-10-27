@@ -6,7 +6,7 @@ function sonIguales(x, y) {
    // De lo contrario, retorna false.
    // Tu código:
 
-   console(x == y);
+   return x == y;
 }
 
 function tienenMismaLongitud(str1, str2) {
@@ -14,14 +14,14 @@ function tienenMismaLongitud(str1, str2) {
    // De lo contrario, retorna false.
    // Tu código:
 
-   console.log(str1.length == str2.length);
+   return str1.length == str2.length;
 }
 
 function menosQueNoventa(num) {
    // Retorna true si el argumento "num" es menor que noventa.
    // De lo contrario, retorna false.
    // Tu código:
-   console.log(num < 90);
+   return num < 90;
 }
 
 function mayorQueCincuenta(num) {
@@ -29,14 +29,14 @@ function mayorQueCincuenta(num) {
    // De lo contrario, retorna false.
    // Tu código:
 
-   console.log(num > 50);
+   return num > 50;
 }
 
 function esPar(num) {
    // Retorna true si "num" es par.
    // De lo contrario, retorna false.
    // Tu código:
-   console.log(num % 2 == 0)
+   return num % 2 == 0;
 }
 
 function esImpar(num) {
@@ -44,7 +44,7 @@ function esImpar(num) {
    // De lo contrario, retorna false.
    // Tu código:
 
-   console.log(num % 2 != 0)
+   return num % 2 != 0;
 }
 
 /*⚠️ NO MODIFIQUES NADA DEBAJO DE ESTO ⚠️*/
