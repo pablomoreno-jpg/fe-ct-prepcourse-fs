@@ -343,5 +343,3 @@ module.exports = {
    breakStatement,
    continueStatement,
 };
-
-console.log(breakStatement(10))
