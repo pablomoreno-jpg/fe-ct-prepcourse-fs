@@ -79,7 +79,7 @@ function saludo(idioma) {
          break;
       case "mandarin":
          saludo = "Ni Hao!";
-         break;
+         break;8
       case "ingles":
          saludo = "Hello!";
          break;
