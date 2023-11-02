@@ -1,11 +1,22 @@
 /*⚠️ NO MODIFIQUES EL NOMBRE DE LAS DECLARACIONES ⚠️*/
 
+const { mayuscula } = require("../M08 JavaScript Callback/homework");
+
 function deObjetoAarray(objeto) {
    // Recibes un objeto. Tendrás que crear un arreglo de arreglos.
    // Cada elemento del arreglo padre será un nuevo arreglo que contendrá dos elementos.
    // Estos elementos debe ser cada par clave:valor del objeto recibido.
    // [EJEMPLO]: {D: 1, B: 2, C: 3} ---> [['D', 1], ['B', 2], ['C', 3]].
    // Tu código:
+
+   var array = [];
+
+   for(propiedad in objeto){
+
+      array.push([propiedad,objeto[propiedad]]);
+   }
+
+   return array;
 }
 
 function numberOfCharacters(string) {
@@ -14,6 +25,57 @@ function numberOfCharacters(string) {
    // Las letras deben estar en orden alfabético.
    // [EJEMPLO]: "adsjfdsfsfjsdjfhacabcsbajda" ---> { a: 5, b: 2, c: 2, d: 4, f: 4, h:1, j: 4, s: 5 }
    // Tu código:
+
+   var separarString = function(string){
+      return string.split("");
+   }
+
+   var buscarLetras = function(array){
+
+      var nuevoArray = [];
+
+      array.forEach(elemento => {
+
+         if(!nuevoArray.includes(elemento)){
+
+            nuevoArray.push(elemento);
+
+         }
+ 
+      })
+
+      return nuevoArray.sort();
+   }
+
+   var conatarLetraRepetida = function(array,letra){
+
+      var cantidadDeRepeticiones = 0;
+      
+      array.forEach(element => {
+         
+         if(element === letra){
+
+            cantidadDeRepeticiones ++;
+         }
+
+      });
+
+      return cantidadDeRepeticiones;
+   }
+
+   var arrayStrng = separarString(string);
+   var letrasEncotradas = buscarLetras(arrayStrng);
+   var objeto = {};
+
+   console.log(letrasEncotradas);
+
+   letrasEncotradas.forEach(letra => {
+
+      objeto[letra] = conatarLetraRepetida(arrayStrng,letra);
+
+   })
+
+   return objeto;
 }
 
 function capToFront(string) {
@@ -22,6 +84,38 @@ function capToFront(string) {
    // Retornar el string.
    // [EJEMPLO]: soyHENRY ---> HENRYsoy
    // Tu código:
+   
+   var verficicarMayuscula = function(letra){
+
+      if(letra === letra.toUpperCase()){
+
+         return true;
+      }
+      else{
+
+         return false;
+      }
+
+   }
+
+
+   var mayus = "";
+   var minus = "";
+
+   for(var i = 0; i < string.length; i++){
+
+      if(verficicarMayuscula(string[i])){
+
+         mayus += string[i];
+      }
+      else{
+
+         minus += string[i];
+      }
+
+   }
+
+   return mayus + minus;
 }
 
 function asAmirror(frase) {
@@ -29,6 +123,31 @@ function asAmirror(frase) {
    // La diferencia es que cada palabra estará escrita al inverso.
    // [EJEMPLO]: "The Henry Challenge is close!"  ---> "ehT yrneH egnellahC si !esolc"
    // Tu código:
+
+   var voltear = function(palabra){
+
+      var nuevaPalabra = "";
+
+      for (var i = palabra.length - 1; i > -1; i--) {
+         
+         nuevaPalabra += palabra[i];
+      }
+
+      return nuevaPalabra;
+   }
+
+   var voltearElementosArrays = function(array,cb){
+
+      var reverso = array.map((elemento) => { return cb(elemento)});
+
+      return reverso;
+   }
+
+   var array = frase.split(" ");
+
+   var nuevoArray = voltearElementosArrays(array,voltear);
+
+   return nuevoArray.join(" ");
 }
 
 function capicua(numero) {
