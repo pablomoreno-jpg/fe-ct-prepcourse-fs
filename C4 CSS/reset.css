@@ -1,0 +1,77 @@
+/* reset.css personalizado */
+
+body {
+    background-color: unset;
+}
+
+.bienvenida {
+    width: auto;
+    margin: 0;
+    padding: 0;
+}
+
+#principal {
+    font-size: initial;
+}
+
+#autor {
+    font-size: initial;
+    color: initial;
+}
+
+.contenido {
+    font-size: initial;
+    width: auto;
+    font-family: initial;
+    margin: 0;
+    border: none;
+    padding: 0;
+    border-radius: 0;
+}
+
+#titulo {
+    font-size: initial;
+    font-weight: normal;
+}
+
+.listas {
+    font-size: initial;
+    margin: 0;
+    width: auto;
+}
+
+.pie {
+    border: none;
+    border-radius: 0;
+    width: auto;
+    margin: 0;
+    font-size: initial;
+    background-color: unset;
+    padding: 0;
+}
+
+#link:hover {
+    background-color: unset;
+}
+
+.imagenes {
+    display: block;
+    justify-content: normal;
+    align-items: normal;
+    justify-content: normal;
+}
+
+.foto {
+    width: auto;
+    height: auto;
+    padding-bottom: 0;
+
+}
+
+.subtitulo {
+    width: auto;
+    font-size: initial;
+    margin: 0;
+    font-weight: normal;
+    font-style: normal;
+}
